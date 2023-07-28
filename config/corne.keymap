@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT       &none      &none      &none      &none     &kp P   &kp DEL
-&kp LCTRL     &none   &none     &none     &none      &none    &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp SEMI   &kp SQT
-&kp LSHFT     &none   &none     &none     &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP    &kp END  &kp FSLH  &kp BSLH
-                             &kp LGUI     &none  &kp SPACE     &kp RET      &none   &kp RALT
+    &none  &kp F1  &kp F2    &kp F3  &kp F4     &kp F5      &kp F6     &kp F7     &kp F8     &kp F9   &kp F10   &kp F11
+&kp LCTRL   &none   &none     &none   &none      &none    &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp SEMI   &kp F12
+&kp LSHFT   &none   &none     &none   &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP    &kp END  &kp FSLH  &kp BSLH
+                           &kp LGUI   &none  &kp SPACE     &kp RET      &none   &kp RALT
             >;
         };
     };
