@@ -16,6 +16,30 @@
             key-positions = <19 20>;
             layers = <0>;
         };
+
+        bigbackspace_combo {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <19 20 21>;
+            layers = <0>;
+        };
+
+        escape_combo {
+            bindings = <&trans>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        ctrl_fn_combo {
+            bindings = <&sl 2>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+
+        numsym_combo {
+            bindings = <&sl 1>;
+            key-positions = <37 40>;
+            layers = <0>;
+        };
     };
 
     keymap {
