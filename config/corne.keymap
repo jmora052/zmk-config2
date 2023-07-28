@@ -40,6 +40,12 @@
             key-positions = <37 40>;
             layers = <0>;
         };
+
+        macro_combo {
+            bindings = <&sl 3>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -87,6 +93,15 @@
 &kp LCTRL   &none   &none     &none   &none      &none    &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp SEMI   &kp F12
 &kp LSHFT   &none   &none     &none   &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP    &kp END  &kp FSLH  &kp BSLH
                            &kp LGUI   &none  &kp SPACE     &kp RET      &none   &kp RALT
+            >;
+        };
+
+        holy_macrimony {
+            bindings = <
+&trans  &kp F13  &kp F14  &kp F15  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans   &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans   &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
