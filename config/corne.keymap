@@ -5,44 +5,10 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        numsym {
-            bindings = <&tog 1>;
-            key-positions = <37 40>;
-            layers = <2>;
-        };
-
-        controls {
-            bindings = <&tog 2>;
-            key-positions = <15 16>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
-        };
-
-        big_backspace {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <19 20 21>;
-        };
-
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <31 32>;
-        };
-
-        new_combo {
-            bindings = <&trans>;
-            key-positions = <>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,14 +20,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-  &kp TAB  &kp Q  &kp W      &kp E      &kp R           &kp T        &kp Y         &kp U          &kp I    &kp O     &kp P        &kp DEL
-&kp LSHFT  &kp A  &kp S      &kp D      &kp F           &kp G        &kp H         &kp J          &kp K    &kp L  &kp SEMI        &kp SQT
- &kp LALT  &kp Z  &kp X      &kp C      &kp V           &kp B        &kp N         &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                         &kp ENTER  &kp LCTRL  &kp LEFT_SHIFT    &kp SPACE  &kp LEFT_ALT  &kp BACKSPACE
+       &kp TAB  &kp Q  &kp W     &kp E  &kp R      &kp T      &kp Y  &kp U      &kp I    &kp O     &kp P  &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S     &kp D  &kp F      &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
+  &kp LEFT_ALT  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+                              &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2   &kp RALT
             >;
         };
 
-        control {
+        lower_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -69,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)   &kp LS(DLLR)   &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &kp DEL
-&kp LSHFT        &kp N1      &kp N2         &kp N3         &kp N4          &kp N5           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0   &kp SQT
- &kp LALT         &kp Z       &kp X  &kp LS(TILDE)       &kp LBKT    &kp LS(RBKT)     &kp LS(RBRC)      &kp LBRC     &kp MINUS     &kp EQUAL      &kp FSLH  &kp BSLH
-                                           &kp RET  &kp LS(TILDE)  &kp LEFT_SHIFT        &kp SPACE        &trans      &kp BSPC
+   &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5      &kp N6    &kp N7    &kp N8     &kp N9  &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT  &trans    &trans
+ &kp LSHFT        &trans        &trans        &trans        &trans        &trans      &trans    &trans    &trans     &trans  &trans    &trans
+                                            &kp LGUI        &trans     &kp SPACE     &kp RET    &trans  &kp RALT
             >;
         };
 
@@ -88,15 +54,6 @@
 &kp LCTRL    &trans  &trans    &trans    &trans     &trans    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT    &trans  &trans    &trans    &trans     &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI    &trans  &kp SPACE      &kp RET     &trans         &kp RALT
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
