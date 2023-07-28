@@ -24,7 +24,7 @@
         };
 
         escape_combo {
-            bindings = <&trans>;
+            bindings = <&kp ESCAPE>;
             key-positions = <31 32>;
             layers = <0>;
         };
