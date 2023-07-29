@@ -75,10 +75,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &kp DEL
-&kp LSHFT        &kp N1      &kp N2         &kp N3        &kp N4          &kp N5           &kp N6        &kp N7         &kp N8        &kp N9        &kp N0   &kp SQT
- &kp LALT         &kp Z       &kp X  &kp LS(TILDE)      &kp LBKT    &kp LS(RBKT)     &kp LS(RBRC)      &kp LBRC      &kp MINUS     &kp EQUAL      &kp FSLH  &kp BSLH
-                                         &kp ENTER        &trans  &kp LEFT_SHIFT        &kp SPACE        &trans  &kp BACKSPACE
+&kp GRAVE  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)       &kp LS(PRCNT)    &kp LS(CARET)       &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)   &kp DEL
+&kp LSHFT        &kp N1      &kp N2         &kp N3        &kp N4              &kp N5           &kp N6             &kp N7         &kp N8        &kp N9        &kp N0   &kp SQT
+ &kp LALT         &kp Z       &kp X  &kp LS(TILDE)      &kp LBKT  &kp LS(LEFT_BRACE)     &kp LS(RBRC)  &kp RIGHT_BRACKET      &kp MINUS     &kp EQUAL      &kp FSLH  &kp BSLH
+                                         &kp ENTER        &trans      &kp LEFT_SHIFT        &kp SPACE             &trans  &kp BACKSPACE
             >;
         };
 
@@ -90,10 +90,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR  &kp F1  &kp F2    &kp F3  &kp F4     &kp F5      &kp F6     &kp F7     &kp F8     &kp F9   &kp F10   &kp F11
-&bt BT_NXT   &none   &none     &none   &none      &none    &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &kp SEMI   &kp F12
- &kp LSHFT   &none   &none     &none   &none      &none    &kp HOME  &kp PG_DN  &kp PG_UP    &kp END  &kp FSLH  &kp BSLH
-                            &kp LGUI   &none  &kp SPACE     &kp RET      &none   &kp RALT
+    &bt BT_CLR      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5       &kp F6        &kp F7         &kp F8     &kp F9   &kp F10   &kp F11
+&kp LEFT_SHIFT       &none         &none         &none         &none         &none     &kp LEFT      &kp DOWN         &kp UP  &kp RIGHT  &kp SEMI   &kp F12
+  &kp LEFT_ALT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp HOME     &kp PG_DN      &kp PG_UP    &kp END  &kp FSLH  &kp BSLH
+                                              &kp LGUI     &kp LCTRL     &kp SPACE    &kp SPACE  &kp LEFT_ALT  &kp BACKSPACE
             >;
         };
 
